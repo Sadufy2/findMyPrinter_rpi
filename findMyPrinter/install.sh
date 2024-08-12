@@ -23,15 +23,7 @@ else
   cd "$CLONE_DIR"
 fi
 
-LINE="sudo python3 /home/$CLONE_DIR/findMyPrinter/comController.py"
-if grep -Fxq "$LINE" ~/.bashrc
-then
-    echo "Line already exists in .bashrc"
-else
-    echo "Adding line to .bashrc..."
-    echo "$LINE" >> ~/.bashrc
-    echo "Line added to .bashrc"
-fi
+
 
 echo "Installing Python and Pip..."
 sudo apt-get install python3 python3-pip -y
@@ -40,6 +32,18 @@ echo "Installing Flask..."
 pip3 install Flask --break-system-packages
 
 echo "Installation complete!"
+
+cd ""
+LINE="sudo python3 /home/$CLONE_DIR/findMyPrinter/comController.py"
+echo "Line: $LINE"
+if grep -Fxq "$LINE" ~/.bashrc
+then
+    echo "Line already exists in .bashrc"
+else
+    echo "Adding line to .bashrc..."
+    echo "$LINE" >> ~/.bashrc
+    echo "Line added to .bashrc"
+fi
 
 echo "Starting App!"
 sudo python3 $LINE
