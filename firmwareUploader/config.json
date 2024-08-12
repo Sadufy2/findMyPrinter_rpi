@@ -1,5 +1,0 @@
-{
-    "droneName": "new_drone",
-    "cubePort": "/dev/ttyACM0",
-    "timeZone": "Europe/Budapest"
-}
