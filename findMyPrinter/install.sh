@@ -36,17 +36,18 @@ echo "Installation complete!"
 # Define the line to add to .bashrc
 LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
 
-echo "Checking if the line is in .bashrc..."
-if grep -Fxq "$LINE" ~/.bashrc; then
-    echo "Line already exists in .bashrc"
-else
-    echo "Adding line to .bashrc..."
-    echo "$LINE" >> ~/.bashrc
-    echo "Line added to .bashrc"
-fi
+# Remove any existing lines from .bashrc that match the pattern
+echo "Removing existing lines from .bashrc..."
+grep -vF "$LINE" ~/.bashrc > ~/.bashrc.tmp && mv ~/.bashrc.tmp ~/.bashrc
 
-echo "Displaying the last 5 lines of"
-#tail -n 5 ~/.bashrc
+# Add the line to .bashrc
+echo "Adding line to .bashrc..."
+echo "$LINE" >> ~/.bashrc
 
+echo "Line added to .bashrc"
+echo "Displaying the last 5 lines of .bashrc:"
+tail -n 5 ~/.bashrc
+
+# Start the application
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
