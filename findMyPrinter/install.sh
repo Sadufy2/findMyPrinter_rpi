@@ -34,14 +34,14 @@ pip3 install Flask --break-system-packages
 echo "Installation complete!"
 
 cd ""
-LINE="sudo python3 /home/$CLONE_DIR/findMyPrinter/comController.py"
+LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
 echo "Line: $LINE"
 if grep -Fxq "$LINE" ~/.bashrc
 then
     echo "Line already exists in .bashrc"
 else
     echo "Adding line to .bashrc..."
-    echo "$LINE" >> ~/.bashrc
+    echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> ~/.bashrc
     echo "Line added to .bashrc"
 fi
 
