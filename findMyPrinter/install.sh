@@ -41,7 +41,7 @@ then
     echo "Line already exists in .bashrc"
 else
     echo "Adding line to .bashrc..."
-    echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> ~/.bashrc
+    echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> .bashrc
     echo "Line added to .bashrc"
 fi
 
