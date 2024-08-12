@@ -36,7 +36,7 @@ echo "Installation complete!"
 cd ""
 LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
 echo "Line: $LINE"
-if grep -Fxq "$LINE" ~/.bashrc
+if grep -Fxq "$LINE" .bashrc
 then
     echo "Line already exists in .bashrc"
 else
