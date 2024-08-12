@@ -40,3 +40,6 @@ echo "Installing Flask..."
 pip3 install Flask
 
 echo "Installation complete!"
+
+echo "Starting App!"
+sudo python3 /home/findMyPrinter/comController.py
