@@ -52,4 +52,4 @@ tail -n 5 ~/.bashrc
 cd "/"
 # Start the application
 echo "Starting App!"
-sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
+#sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
