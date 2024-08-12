@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 set -e
 
 cd "/home"
@@ -48,6 +47,6 @@ else
 fi
 tail -n 5 ~/.bashrc
 
-cd ""
+cd "~/"
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
