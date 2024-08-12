@@ -33,19 +33,4 @@ pip3 install Flask --break-system-packages
 
 echo "Installation complete!"
 
-
-cd "/"
-
-# Add the line to .bashrc
-echo "Adding line to .bashrc..."
-echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> ~/.bashrc
-
-echo "Line added to .bashrc"
-echo "Displaying the last 5 lines of .bashrc:"
-tail -n 5 ~/.bashrc
-
-cd "/"
-# Start the application
-echo "Starting App!"
-#sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
-echo "test"
+#LINE = "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
