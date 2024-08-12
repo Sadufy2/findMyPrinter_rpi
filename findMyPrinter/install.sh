@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# Exit the script if any command fails
+
 set -e
+
+cd "/home"
 
 echo "Updating and upgrading the system..."
 sudo apt-get update
