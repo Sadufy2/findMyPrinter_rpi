@@ -53,3 +53,4 @@ cd "/"
 # Start the application
 echo "Starting App!"
 #sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
+echo "test"
