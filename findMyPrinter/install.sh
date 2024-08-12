@@ -12,7 +12,7 @@ sudo apt-get install git -y
 
 echo "Cloning the GitHub repository..."
 REPO_URL="https://github.com/Sadufy2/findMyPrinter_rpi.git"
-CLONE_DIR="repository"
+CLONE_DIR="findMyPrinter_rpi"
 
 if [ -d "$CLONE_DIR" ]; then
   echo "Repository already cloned. Pulling the latest changes..."
@@ -23,7 +23,7 @@ else
   cd "$CLONE_DIR"
 fi
 
-LINE="sudo python3 /home/findMyPrinter/comController.py"
+LINE="sudo python3 /home/$CLONE_DIR/findMyPrinter/comController.py"
 if grep -Fxq "$LINE" ~/.bashrc
 then
     echo "Line already exists in .bashrc"
@@ -37,9 +37,9 @@ echo "Installing Python and Pip..."
 sudo apt-get install python3 python3-pip -y
 
 echo "Installing Flask..."
-pip3 install Flask
+pip3 install Flask --break-system-packages
 
 echo "Installation complete!"
 
 echo "Starting App!"
-sudo python3 /home/findMyPrinter/comController.py
+sudo python3 $LINE
