@@ -45,8 +45,8 @@ else
     echo "Line added to .bashrc"
 fi
 
-echo "Displaying the last 5 lines of .bashrc:"
-tail -n 5 ~/.bashrc
+echo "Displaying the last 5 lines of"
+#tail -n 5 ~/.bashrc
 
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
