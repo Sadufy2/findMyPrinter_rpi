@@ -46,7 +46,8 @@ else
     echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> ~/.bashrc
     echo "Line added to .bashrc"
 fi
-tail -n 20 ~/.bashrc
+tail -n 5 ~/.bashrc
 
+cd ""
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
