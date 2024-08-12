@@ -35,7 +35,7 @@ pip3 install Flask --break-system-packages
 
 echo "Installation complete!"
 
-cd "~"
+cd ""
 LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
 echo "Line: $LINE"
 if grep -Fxq "$LINE" ~/.bashrc
@@ -48,6 +48,6 @@ else
 fi
 tail -n 5 ~/.bashrc
 
-cd "~"
+cd ""
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
