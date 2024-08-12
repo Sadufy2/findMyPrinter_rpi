@@ -34,4 +34,4 @@ pip3 install Flask --break-system-packages
 echo "Installation complete!"
 echo "Update .bashrc by running bash_update.sh"
 
-#LINE = "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
+sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
