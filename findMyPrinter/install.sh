@@ -35,6 +35,7 @@ echo "Installation complete!"
 
 # Define the line to add to .bashrc
 LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
+cd "/"
 
 # Remove any existing lines from .bashrc that match the pattern
 echo "Removing existing lines from .bashrc..."
