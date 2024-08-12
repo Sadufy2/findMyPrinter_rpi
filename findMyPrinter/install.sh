@@ -2,7 +2,8 @@
 
 set -e
 
-cd "/home"
+echo "Changing to home directory..."
+cd /home
 
 echo "Updating and upgrading the system..."
 sudo apt-get update
@@ -24,8 +25,6 @@ else
   cd "$CLONE_DIR"
 fi
 
-
-
 echo "Installing Python and Pip..."
 sudo apt-get install python3 python3-pip -y
 
@@ -34,19 +33,20 @@ pip3 install Flask --break-system-packages
 
 echo "Installation complete!"
 
-cd ""
+# Define the line to add to .bashrc
 LINE="sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py"
-echo "Line: $LINE"
-if grep -Fxq "$LINE" ~/.bashrc
-then
+
+echo "Checking if the line is in .bashrc..."
+if grep -Fxq "$LINE" ~/.bashrc; then
     echo "Line already exists in .bashrc"
 else
     echo "Adding line to .bashrc..."
-    echo "sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py" >> ~/.bashrc
+    echo "$LINE" >> ~/.bashrc
     echo "Line added to .bashrc"
 fi
+
+echo "Displaying the last 5 lines of .bashrc:"
 tail -n 5 ~/.bashrc
 
-cd "~/"
 echo "Starting App!"
 sudo python3 /home/findMyPrinter_rpi/findMyPrinter/comController.py
