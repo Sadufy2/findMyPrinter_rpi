@@ -23,12 +23,12 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0')
 
 
-Step3:
+Step2:
 ---------------------------------------------------
 sudo pip install flask
 
 
-Step4:
+Step3:
 ---------------------------------------------------
 sudo nano ~/.bashrc
 
@@ -36,7 +36,7 @@ Copy this:
 export PATH="$PATH:/home/pi/.local/bin"
 /usr/bin/python3 /home/findMyPrinter/comController.py
 
-Step5:
+Step4:
 ---------------------------------------------------
 source ~/.bashrc
 
